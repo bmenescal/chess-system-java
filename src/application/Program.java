@@ -20,8 +20,8 @@ public class Program {
 		
 		
 		
-		while (true) {
-			try {
+		while (!chessMatch.getCheckMate()) {
+		try {
 		
 			UI.clearScreen();
 			UI.printMatch(chessMatch, captured);
@@ -42,6 +42,7 @@ public class Program {
 				captured.add(capturedPiece);
 			}
 			
+			
 			}
 			
 			catch(ChessException e) {
@@ -56,5 +57,7 @@ public class Program {
 	
 
 	}
+		UI.clearScreen();
+		UI.printMatch(chessMatch, captured);
 }
 }
